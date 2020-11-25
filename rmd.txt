@@ -1,0 +1,15 @@
+https://www.thecybersploit.com/2019/12/Hacking-WPA2-Wi-Fi-password-using-Evil-Twin-Attack.html
+
+service apache2 start
+So we have our phishing web application ready. Now we  require a database to store the passwords  the victim will type and submit.
+Open Mysql and execute the below commands.
+-          service mysql start
+-          mysql
+-          mysql> create database rogueap;
+-          mysql> create user rogueuser;
+-          mysql> grant all on rogueap.* to 'rogueuser'@'localhost' identified by 'roguepassword';
+-          mysql> use rogueap;
+-          mysql> create table wpa_keys(password1 varchar(30), password2 varchar(30));
+-          mysql> ALTER DATABASE rogueap CHARACTER SET 'utf8';
+Note: Don’t change any values in
+mysql> select * from wpa_keys;
